@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" href="img/icon.png">
     <link rel="shortcut icon" href="img/icon.png">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="book.css">
 </head>
 
 <body>
@@ -27,97 +28,176 @@
 
         <main>
 
-            <article>
-                <h1 class="titulo">Laboratorio ISyTE</h1>
+            <article style="background-image: url('img/fondo6.webp');">
+                <div>
+                    <h1 class="titulo">Laboratorio ISyTE</h1>
 
-                <p class="textogeneral">
-                    El Laboratorio de Innovación en Desarrollo de Software (Lab Core ISyTE) busca ser un espacio de colaboración y 
-                    aprendizaje para profesores y alumnos de la Facultad de Ingeniería, donde se promueva la investigación, el desarrollo de proyectos 
-                    y la formación en tecnologías de vanguardia en el ámbito del software. 
-                    Con la implementación de LIDS, se espera potenciar el talento y la creatividad de los profesionales del desarrollo de software, 
-                    contribuyendo al avance tecnológico y a la generación de soluciones innovadoras para diversos sectores de la sociedad.
-                </p>
-
-
-                <section class="carousel-section">
-                    <div class="carousel-3d-container">
-                        <div class="carousel-3d">
-                            <div class="carousel-item">
-                                <div class="carousel-image">
-                                    <img src="img/img1.jpg" alt="Proyecto 1">
-                                </div>
-                                <div class="carousel-description">
-                                    <h3>Quienes somos?</h3>
-                                    <p>Somos estudiantes de la UABC, de la Facultad de Ingeniería, Arquitectura y
-                                        Diseño, y
-                                        formamos parte de la carrara de Ingeniería en Software y Tecnologías Emergentes.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item">
-                                <div class="carousel-image">
-                                    <img src="img/img2.jpg" alt="Proyecto 2">
-                                </div>
-                                <div class="carousel-description">
-                                    <h3>Lab Core ISyTE</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt
-                                        ut labore et dolore magna aliqua. Ultrices in iaculis nunc sed augue lacus
-                                        viverra
-                                        vitae
-                                        congue. </p>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item">
-                                <div class="carousel-image">
-                                    <img src="img/img3.jpg" alt="Proyecto 3">
-                                </div>
-                                <div class="carousel-description">
-                                    <h3>Lab Core ISyTE</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt
-                                        ut labore et dolore magna aliqua. Ultrices in iaculis nunc sed augue lacus
-                                        viverra
-                                        vitae
-                                        congue.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item">
-                                <div class="carousel-image">
-                                    <img src="img/img4.jpg" alt="Proyecto 4">
-                                </div>
-                                <div class="carousel-description">
-                                    <h3>Lab Core ISyTE</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt
-                                        ut labore et dolore magna aliqua. Ultrices in iaculis nunc sed augue lacus
-                                        viverra
-                                        vitae
-                                        congue. </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="carousel-controls">
-                            <button class="carousel-btn prev" aria-label="Imagen anterior">‹</button>
-                            <button class="carousel-btn next" aria-label="Siguiente imagen">›</button>
-                        </div>
-
-                        <div class="carousel-indicators">
-                            <span class="indicator active" data-index="0"></span>
-                            <span class="indicator" data-index="1"></span>
-                            <span class="indicator" data-index="2"></span>
-                            <span class="indicator" data-index="3"></span>
-                        </div>
-                    </div>
-                </section>
-
+                    <p class="texto">
+                        El Laboratorio de Innovación en Desarrollo de Software (Lab Core ISyTE) busca ser un espacio de
+                        colaboración y
+                        aprendizaje para profesores y alumnos de la Facultad de Ingeniería, donde se promueva la
+                        investigación, el desarrollo de proyectos
+                        y la formación en tecnologías de vanguardia en el ámbito del software.
+                        Con la implementación de LIDS, se espera potenciar el talento y la creatividad de los
+                        profesionales del desarrollo de software,
+                        contribuyendo al avance tecnológico y a la generación de soluciones innovadoras para diversos
+                        sectores de la sociedad.
+                    </p>
+                </div>
             </article>
 
+            <article style="background-image: url('img/fondo2.webp');">
+                <div class="container">
+                    <button id="prev-btn" disabled>&lt;</button>
+
+                    <div class="book">
+                        <!-- Spread 1: Páginas 1-2 -->
+                        <div class="page page-1 static-page">
+                            <div class="page-side">
+                                <h2 class="titulo">Página 1</h2>
+                                <p>“Las pruebas muestran la presencia de errores, no la ausencia de errores.”</p>
+                                <p>— Edsger W. Dijkstra</p>
+                                <span class="page-number">Página 1</span>
+                            </div>
+                        </div>
+
+                        <div class="page page-2 flippable">
+                            <div class="page-side front-face">
+                                <h2 class="titulo">Página 2</h2>
+                                <p>“No es un error, es una característica no documentada.”</p>
+                                <p>— Un ingeniero(a) de Software</p>
+                                <span class="page-number">Página 2</span>
+                            </div>
+                            <div class="page-side back-face">
+                                <h2 class="titulo">Página 3</h2>
+                                <p>“La calidad nunca es un accidente; siempre es el resultado de un esfuerzo
+                                    inteligente.”</p>
+                                <p>— John Ruskin</p>
+                                <span class="page-number">Página 3</span>
+                            </div>
+                        </div>
+
+                        <!-- Spread 2: Páginas 3-4 -->
+                        <div class="page page-3 flippable">
+                            <div class="page-side front-face">
+                                <h2 class="titulo">Página 4</h2>
+                                <p>"Todo gran desarrollador que conoces se formó enfrentando problemas para los que
+                                    inicialmente no
+                                    estaba calificado, hasta que aprendió a resolverlos."</p>
+                                <p>— Patrick McKenzie</p>
+                                <span class="page-number">Página 4</span>
+                            </div>
+                            <div class="page-side back-face">
+                                <h2 class="titulo">Página 5</h2>
+                                <p>“La función de un buen software es hacer que lo complejo parezca simple.”</p>
+                                <p>— Grady Booch, creador de UML</p>
+                                <span class="page-number">Página 5</span>
+                            </div>
+                        </div>
+
+                        <!-- Spread 3: Páginas 5-6 -->
+                        <div class="page page-4 flippable">
+                            <div class="page-side front-face">
+                                <h2 class="titulo">Página 6</h2>
+                                <p>“Los malos programadores se preocupan por el código. Los buenos programadores se
+                                    preocupan por
+                                    las estructuras de datos y sus relaciones.”</p>
+                                <p>— Linus Torvalds, creador de Linux y Git</p>
+                                <span class="page-number">Página 6</span>
+                            </div>
+                            <div class="page-side back-face">
+                                <h2 class="titulo">Página 7</h2>
+                                <p>“La programación es el arte de diseñar algoritmos y depurar código erróneo.”</p>
+                                <p>— Ellen Ullman</p>
+                                <span class="page-number">Página 7</span>
+                            </div>
+                        </div>
+                        <!-- Spread 4: Páginas 7-8 -->
+                        <div class="page page-5 flippable">
+                            <div class="page-side front-face">
+                                <h2 class="titulo">Página 8</h2>
+                                <p>“Cualquiera puede escribir código que una computadora pueda entender. Los buenos
+                                    programadores
+                                    escriben código que los humanos pueden entender.”</p>
+                                <p>— Martin Fowler</p>
+                                <span class="page-number">Página 8</span>
+                            </div>
+                            <div class="page-side back-face">
+                                <h2 class="titulo">Página 9</h2>
+                                <p>“El código es como el humor. Cuando tienes que explicarlo, es malo.”</p>
+                                <p>— Cory House</p>
+                                <span class="page-number">Página 9</span>
+                            </div>
+                        </div>
+                        <!-- Spread 5: Páginas 9-10 -->
+                        <div class="page page-6 flippable">
+                            <div class="page-side front-face">
+                                <h2 class="titulo">Página 10</h2>
+                                <p>“Si tuviera una hora para salvar al mundo, dedicaría 55 minutos a definir
+                                    correctamente el
+                                    problema y 5 minutos a encontrar la solución.”</p>
+                                <p>— Albert Einstein</p>
+                                <span class="page-number">Página 10</span>
+                            </div>
+                            <div class="page-side back-face">
+                                <h2 class="titulo">Página 11</h2>
+                                <p>“Si tuviera un sprint para salvar el proyecto, dedicaría el 80% del tiempo a entender
+                                    el problema
+                                    y el 20% a codificar la solución.”</p>
+                                <p>— Un ingeniero(a) de Software</p>
+                                <span class="page-number">Página 11</span>
+                            </div>
+                        </div>
+                        <!-- Spread 6: Páginas 11-12 -->
+                        <div class="page page-7 flippable">
+                            <div class="page-side front-face">
+                                <h2 class="titulo">Página 12</h2>
+                                <p>“Primero, resuelve el problema. Luego, escribe el código.”</p>
+                                <p>— John Johnson</p>
+                                <span class="page-number">Página 12</span>
+                            </div>
+                            <div class="page-side back-face">
+                                <h2 class="titulo">Página 13</h2>
+                                <p>“Las cosas simples deberían ser simples, las cosas complejas deberían ser posibles.”
+                                </p>
+                                <p>— Alan Kay</p>
+                                <span class="page-number">Página 13</span>
+                            </div>
+                        </div>
+                        <!-- Spread 7: Páginas 13-14 -->
+                        <div class="page page-8 flippable">
+                            <div class="page-side front-face">
+                                <h2 class="titulo">Página 14</h2>
+                                <p>“Quizás no pienses que los programadores son artistas, pero la programación es una
+                                    profesión
+                                    extremadamente creativa. Es creatividad basada en la lógica.”</p>
+                                <p>— John Romero</p>
+                                <span class="page-number">Página 14</span>
+                            </div>
+                            <div class="page-side back-face">
+                                <h2 class="titulo">Página 15</h2>
+                                <p>“La frase más peligrosa del idioma es: Siempre lo hemos hecho de esta forma.”</p>
+                                <p>— Grace Hopper</p>
+                                <span class="page-number">Página 15</span>
+                            </div>
+                        </div>
+                        <!-- Spread 8: Páginas 15-16 -->
+                        <div class="page page-9 flippable">
+                            <div class="page-side front-face">
+                                <h2 class="titulo">Página 16</h2>
+                                <p>“Aprender a escribir programas expande tu mente y te ayuda a pensar mejor; crea una
+                                    forma de
+                                    pensar sobre las cosas que es útil en todos los ámbitos”</p>
+                                <p>— Bill Gates</p>
+                                <span class="page-number">Página 16</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button id="next-btn">&gt;</button>
+                </div>
+                <script src="book.js"></script>
+            </article>
 
         </main>
 
@@ -147,7 +227,7 @@
             <p class="copyright-text">&copy; 2025 Lab Core ISyTE. Todos los derechos reservados.</p>
         </footer>
     </div>
-    <script src="carrusel.js"></script>
+    <script src="scroll.js"></script>
 </body>
 
 </html>
