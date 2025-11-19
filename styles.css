@@ -9,7 +9,7 @@
     --amarillo: #DE9817;
     --gris: #272822;
     --azul: #2450A6;
-    --clao: #B4D9C4;
+    --claro: #B4D9C4;
     --blanco: #F2F2F2;
 }
 
@@ -36,16 +36,16 @@ header {
     font-size: 40px;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: var(--amarillo);
+    color: blanchedalmond;
 }
 
 .texto {
     text-align: justify;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #ccc;
+    color: var(--claro);
     margin-left: 5%;
     margin-right: 5%;
-    background-color: rgba(102, 102, 102, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
     border-radius: 15px;
 }
@@ -133,6 +133,7 @@ main {
 }
 
 h2 {
+    color: aquamarine;
     text-align: center;
 }
 

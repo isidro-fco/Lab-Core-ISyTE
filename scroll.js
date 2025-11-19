@@ -1,36 +1,35 @@
-// scroll.js
 document.addEventListener("DOMContentLoaded", () => {
-  // Seleccionamos todos los artículos y el footer
-  const sections = [...document.querySelectorAll("article"), document.querySelector("footer")];
-  let isScrolling = false;
-  let scrollTimeout;
+  // Seleccionamos todos los elementos <article> y el <footer>
+  const secciones = [...document.querySelectorAll("article"), document.querySelector("footer")];
+  let estaScrolleando = false;
+  let tiempoEsperaScroll;
 
   window.addEventListener("scroll", () => {
-    if (isScrolling) return;
+    if (estaScrolleando) return;
 
-    clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(() => {
-      const scrollPos = window.scrollY;
-      const viewportHeight = window.innerHeight;
+    clearTimeout(tiempoEsperaScroll);
+    tiempoEsperaScroll = setTimeout(() => {
+      const posicionScroll = window.scrollY;
+      const alturaViewport = window.innerHeight;
 
-      let closestSection = sections[0];
-      let minDistance = Math.abs(sections[0].offsetTop - scrollPos);
+      let seccionMasCercana = secciones[0];
+      let distanciaMinima = Math.abs(secciones[0].offsetTop - posicionScroll);
 
-      // Buscar la sección más cercana al centro de la pantalla
-      sections.forEach(section => {
-        const distance = Math.abs(section.offsetTop - scrollPos);
-        if (distance < minDistance) {
-          closestSection = section;
-          minDistance = distance;
+      // Buscar la sección más cercana a la posición actual de scroll (parte superior del viewport)
+      secciones.forEach(seccion => {
+        const distancia = Math.abs(seccion.offsetTop - posicionScroll);
+        if (distancia < distanciaMinima) {
+          seccionMasCercana = seccion;
+          distanciaMinima = distancia;
         }
       });
 
       // Animar hacia la sección más cercana
-      isScrolling = true;
-      closestSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      estaScrolleando = true;
+      seccionMasCercana.scrollIntoView({ behavior: "smooth", block: "start" });
 
-      // Liberar bloqueo después de la animación
-      setTimeout(() => { isScrolling = false; }, 600);
-    }, 200); // espera breve para que el usuario termine de scrollear
+      // Liberar bloqueo después de la duración aproximada de la animación (600ms)
+      setTimeout(() => { estaScrolleando = false; }, 600);
+    }, 200); // Espera breve (200ms) para que el usuario termine de scrollear
   });
 });

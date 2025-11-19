@@ -1,39 +1,39 @@
 // book.js
 
 document.addEventListener('DOMContentLoaded', () => {
-    
-    const flippablePages = document.querySelectorAll('.flippable');
-    const prevBtn = document.getElementById('prev-btn');
-    const nextBtn = document.getElementById('next-btn');
 
-    let currentSpread = 0;
-    const totalSpreads = flippablePages.length - 1; // -1 porque empezamos en 0
+    const paginasVolteables = document.querySelectorAll('.flippable');
+    const btnAnterior = document.getElementById('prev-btn');
+    const btnSiguiente = document.getElementById('next-btn');
 
-    const updateButtons = () => {
-        prevBtn.disabled = currentSpread === 0;
-        nextBtn.disabled = currentSpread === totalSpreads;
+    let doblePaginaActual = 0;
+    const totalDoblesPaginas = paginasVolteables.length - 1; // -1 porque comenzamos en 0
+
+    const actualizarBotones = () => {
+        btnAnterior.disabled = doblePaginaActual === 0;
+        btnSiguiente.disabled = doblePaginaActual === totalDoblesPaginas;
     };
 
-    const turnPage = (direction) => {
-        if (direction === 1) { // ADELANTE
-            if (currentSpread >= totalSpreads) return;
-            
-            flippablePages[currentSpread].classList.add('flipped');
-            currentSpread++;
+    const pasarPagina = (direccion) => {
+        if (direccion === 1) { // ADELANTE
+            if (doblePaginaActual >= totalDoblesPaginas) return;
 
-        } else if (direction === -1) { // ATRÁS
-            if (currentSpread <= 0) return;
-            
-            currentSpread--;
-            flippablePages[currentSpread].classList.remove('flipped');
+            paginasVolteables[doblePaginaActual].classList.add('flipped');
+            doblePaginaActual++;
+
+        } else if (direccion === -1) { // ATRÁS
+            if (doblePaginaActual <= 0) return;
+
+            doblePaginaActual--;
+            paginasVolteables[doblePaginaActual].classList.remove('flipped');
         }
 
-        updateButtons();
+        actualizarBotones();
     };
 
-    nextBtn.addEventListener('click', () => turnPage(1));
-    prevBtn.addEventListener('click', () => turnPage(-1));
+    btnSiguiente.addEventListener('click', () => pasarPagina(1));
+    btnAnterior.addEventListener('click', () => pasarPagina(-1));
 
     // Inicialización
-    updateButtons();
+    actualizarBotones();
 });

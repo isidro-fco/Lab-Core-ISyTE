@@ -39,7 +39,7 @@
     flex-direction: column;
     justify-content: space-between;
     border-radius: 0 15px 15px 0;
-    color: var(--azul);
+    color: var(--blanco);
 }
 
 /* PÁGINA ESTÁTICA IZQUIERDA (SIEMPRE VISIBLE) */
