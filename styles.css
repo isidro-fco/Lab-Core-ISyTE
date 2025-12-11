@@ -113,7 +113,7 @@ article, footer {
 }
 
 /* ============================================================================= */
-/* ARTICLE (CONFIGURACIÓN DEL FONDO) */
+/* ARTICLE */
 /* ============================================================================= */
 
 article {
@@ -341,9 +341,8 @@ footer {
     article {
         min-height: 100vh;
         height: auto;
-        justify-content: flex-start;
+        justify-content: center;
         padding-top: 80px;
-        background-attachment: scroll; 
     }
 
     .titulo {
